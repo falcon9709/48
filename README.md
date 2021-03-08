@@ -2,7 +2,7 @@
 > 由于第三方风险争议，此脚本停止分享。
 > ***
 ### 自己的收集使用教程具体找作者'
-### + 20210308 ，抄了个49任务的，不知道能不能用，[49源地址](https://github.com/2368693074/ceshi)
+### 1. 20210308 ，抄了个49任务的，不知道能不能用，[49源地址](https://github.com/2368693074/ceshi)
  ### fork 好后，点击 Settings 、 secrets 、 New repository secrets 进行添加相关数据
  ![Snipaste_2021-03-01_05-36-51](https://user-images.githubusercontent.com/79479594/109432788-4182de00-7a50-11eb-9ebf-3da345f21e35.png)
 
