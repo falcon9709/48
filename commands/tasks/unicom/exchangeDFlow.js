@@ -254,6 +254,7 @@ var exchangeDFlow = {
             console.info('没有有效的流量包')
             need_exchange = true
         }
+
         if (need_exchange) {
             await exchangeDFlow.exchange(axios, options)
         } else {
@@ -261,6 +262,16 @@ var exchangeDFlow = {
         }
     },
     exchange: async (axios, options) => {
+        let flowPackages = await exchangeDFlow.querywinninglist(axios, options)
+        let flowPackagesActive = flowPackages.filter(f => f.active)
+        if (flowPackagesActive.length) {
+            await exchangeDFlow.activationFlowPackages(axios, {
+                ...options,
+                selectedFlow: flowPackagesActive.pop()
+            })
+        } else {
+            await exchangeDFlow.exchangeFlow(axios, options)
+        }
     },
     doTask: async (axios, options) => {
         await exchangeDFlow.exchange(axios, options)

@@ -373,7 +373,7 @@ var producGame = {
         // 亿万豪车2
         let others = ['1110422106']
 
-        console.info('调度任务中', '并发数', 30)
+        console.info('调度任务中', '并发数', 2)
         for (let game of games) {
             queue.add(async () => {
                 console.info(game.name)
@@ -417,7 +417,7 @@ var producGame = {
         console.info('剩余未完成game', games.length)
         let queue = new PQueue({ concurrency: 2 });
 
-        console.info('调度任务中', '并发数', 30)
+        console.info('调度任务中', '并发数', 2)
         for (let game of games) {
             queue.add(async () => {
                 console.info(game.name)
