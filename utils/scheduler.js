@@ -298,7 +298,7 @@ let scheduler = {
             for (let task of will_tasks) {
                 scheduler.updateTaskFile(task, {
                     // 限制执行时长2hours，runStopTime用于防止因意外原因导致isRunning=true的任务被中断，而未改变状态使得无法再次执行的问题
-                    runStopTime: moment().add(2, 'hours').format('YYYY-MM-DD HH:mm:ss'),
+                    runStopTime: moment().add(2, 'hours').format('YYYY-MM-DD 00:00:00'),
                     isRunning: true
                 })
                 queue.add(async () => {
