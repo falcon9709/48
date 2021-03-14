@@ -90,7 +90,7 @@ let scheduler = {
             queues.push({
                 taskName: taskName,
                 taskState: 0,
-                willTime: willTime.format('YYYY-MM-DD HH:mm:ss'),
+                willTime: willTime.format('YYYY-MM-DD 00:00:00'),
                 waitTime: waitTime
             })
         }
@@ -325,7 +325,7 @@ let scheduler = {
                                 isupdate = true
                             }
                             if (ttt.options.isCircle && ttt.options.intervalTime) {
-                                newTask.willTime = moment().add(ttt.options.intervalTime, 'seconds').format('YYYY-MM-DD 00:00:00')
+                                newTask.willTime = moment().add(ttt.options.intervalTime, 'seconds').format('YYYY-MM-DD HH:mm:ss')
                                 isupdate = true
                             }
                         } else {
