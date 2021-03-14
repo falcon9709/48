@@ -44,7 +44,7 @@ var dailysignin = {
     return data
   },
   daySign: async (axios, options) => {
-    const useragent = `okhttp/4.4.0`
+    const useragent = `Mozilla/5.0 (Linux; Android 9; Redmi Note 7 Build/PKQ1.180904.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/80.0.3987.99 Mobile Safari/537.36; unicom{version:android@8.0102,};devicetype{deviceBrand:Xiaomi,deviceModel:Redmi Note 7};{yw_code:}`
     let { data, config } = await axios.request({
       baseURL: 'https://act.10010.com/',
       headers: {
